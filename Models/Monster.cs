@@ -1,4 +1,4 @@
-﻿namespace PWC_Project.Models
+﻿namespace pwc_project.Models
 {
     public class Monster
     {

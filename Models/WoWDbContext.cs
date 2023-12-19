@@ -2,13 +2,29 @@
 using Pomelo.EntityFrameworkCore.MySql;
 using System.Threading;
 
-namespace PWC_Project.Models
+namespace pwc_project.Models
 {
     public class WoWDbContext : DbContext
     {
         private readonly IConfiguration _configuration;
 
         public DbSet<Monster> Monsters { get; set; }
+
+        public DbSet<Monster> Users { get; set; }
+
+        public DbSet<Monster> Characters { get; set; }
+
+        public DbSet<Monster> Categories { get; set; }
+
+        public DbSet<Monster> Equipments { get; set; }
+
+        public DbSet<Monster> EquipmentStat { get; set; }
+
+        public DbSet<Monster> EquipmentSlot { get; set; }
+
+
+
+
 
         public WoWDbContext(IConfiguration configuration)
         {

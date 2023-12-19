@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PWC_Project.Models;
+using pwc_project.Models;
 
 namespace pwc_project.Controllers
 {
@@ -19,7 +19,7 @@ namespace pwc_project.Controllers
         }
 
         [HttpGet]
-        public List<Monster> GetMonsters()
+        public IActionResult GetMonsters()
         {
             List<Monster> monsters = new List<Monster>();
 
@@ -28,7 +28,7 @@ namespace pwc_project.Controllers
                 monsters = context.Monsters.ToList();
             }
 
-            return monsters;
+            return Ok(monsters);
         }
     }
 }

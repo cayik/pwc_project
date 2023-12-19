@@ -4,7 +4,7 @@ use WoW_BIS;
 
 -- Löschen der existierenden Tabellen, falls vorhanden
 DROP TABLE IF EXISTS EquipmentStat;
-DROP TABLE IF EXISTS MonsterDrop;
+DROP TABLE IF EXISTS MonsterDrop;   
 DROP TABLE IF EXISTS EquipmentSlot;
 DROP TABLE IF EXISTS Monsters;
 DROP TABLE IF EXISTS Equipments;
