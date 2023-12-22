@@ -1,7 +1,10 @@
-﻿namespace pwc_project.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace pwc_project.Models.database
 {
     public class User
     {
+        [Key]
         public int userID { get; set; }
 
         public string userName { get; set; }

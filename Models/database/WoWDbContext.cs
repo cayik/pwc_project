@@ -2,7 +2,7 @@
 using Pomelo.EntityFrameworkCore.MySql;
 using System.Threading;
 
-namespace pwc_project.Models
+namespace pwc_project.Models.database
 {
     public class WoWDbContext : DbContext
     {
@@ -10,17 +10,19 @@ namespace pwc_project.Models
 
         public DbSet<Monster> Monsters { get; set; }
 
-        public DbSet<Monster> Users { get; set; }
+        public DbSet<MonsterDrop> MonsterDrop { get; set; }
 
-        public DbSet<Monster> Characters { get; set; }
+        public DbSet<User> Users { get; set; }
 
-        public DbSet<Monster> Categories { get; set; }
+        public DbSet<Character> Characters { get; set; }
 
-        public DbSet<Monster> Equipments { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
-        public DbSet<Monster> EquipmentStat { get; set; }
+        public DbSet<Equipment> Equipments { get; set; }
 
-        public DbSet<Monster> EquipmentSlot { get; set; }
+        public DbSet<EquipmentStat> EquipmentStat { get; set; }
+
+        public DbSet<EquipmentSlot> EquipmentSlot { get; set; }
 
 
 

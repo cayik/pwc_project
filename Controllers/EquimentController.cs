@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using pwc_project.Models;
+using pwc_project.Models.database;
 
 namespace pwc_project.Controllers
 {
@@ -30,6 +31,8 @@ namespace pwc_project.Controllers
 
 
             }
+
+            return Ok(equipment);
         }
 
         
