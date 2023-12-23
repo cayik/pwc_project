@@ -9,6 +9,6 @@ namespace pwc_project.Models.database
 
         public string characterName { get; set; }
 
-        public int userID { get; set; }
+        public int? userID { get; set; }
     }
 }
