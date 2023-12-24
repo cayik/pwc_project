@@ -67,7 +67,7 @@ bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoY
 
 Bitte beachten Sie, dass dies nur zu Demonstrationszwecken ist. In einer produktiven Umgebung sollten Sie geeignete Sicherheitsmaßnahmen ergreifen und den JWT-Token sicher verwalten.
 
-![[/img/beare.png]]
+![](./img/bearer.png)
 
 
 Bei Fragen oder Problemen können Sie uns gerne eine E-Mail an cayan.ayik1@gmail.com senden.
