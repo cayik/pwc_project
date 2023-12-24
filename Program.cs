@@ -8,10 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Füge Dienste zum Container hinzu.
 builder.Services.AddControllers();
-// Erfahre mehr über die Konfiguration von Swagger/OpenAPI unter https://aka.ms/aspnetcore/swashbuckle
+
+// Konfiguriere die API-Dokumentation mit Swagger/OpenAPI.
 builder.Services.AddEndpointsApiExplorer();
 
-// Lade Konfigurationsdatei für Geheimnisse, optional und mit automatischem Neuladen bei Änderungen.
+// Lade eine optionale Konfigurationsdatei für Geheimnisse, die automatisch neu geladen wird, wenn sie geändert wird.
 builder.Configuration.AddJsonFile("secrets.json", optional: true, reloadOnChange: true);
 
 // Konfiguriere SwaggerGen mit OAuth2-Sicherheitsdefinitionen.
@@ -34,9 +35,13 @@ builder.Services.AddAuthentication().AddJwtBearer(
     {
         options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
         {
+            // Token-Signaturschlüssel validieren.
             ValidateIssuerSigningKey = true,
+            // Publikum (Audience) nicht validieren.
             ValidateAudience = false,
+            // Herausgeber (Issuer) nicht validieren.
             ValidateIssuer = false,
+            // Symmetrischen Schlüssel für die Signatur validieren.
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT_SECRET"]))
         };
     }
@@ -47,7 +52,7 @@ var app = builder.Build();
 // Konfiguriere den HTTP-Anforderungs-Pipeline.
 if (app.Environment.IsDevelopment())
 {
-    // Benutze Swagger in der Entwicklungsphase.
+    // Verwende Swagger in der Entwicklungsphase für API-Dokumentation.
     app.UseSwagger();
     app.UseSwaggerUI();
 }
@@ -55,7 +60,7 @@ if (app.Environment.IsDevelopment())
 // Benutze die Autorisierungsmiddleware.
 app.UseAuthorization();
 
-// Kartiere die Controller-Endpunkte.
+// Karte die Controller-Endpunkte.
 app.MapControllers();
 
 // Starte die Anwendung.
