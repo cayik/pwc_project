@@ -95,7 +95,7 @@ namespace pwc_project.Controllers
 
                 if (equipment == null)
                 {
-                    return NotFound($"Equipment nicht mit der ID {equipmentID} nicht gefunden!");
+                    return NotFound($"Equipment mit der ID {equipmentID} nicht gefunden!");
                 }
 
                 stats = context.EquipmentStat.ToList();

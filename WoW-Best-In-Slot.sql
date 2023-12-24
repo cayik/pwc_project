@@ -26,9 +26,7 @@ CREATE TABLE Users(
 CREATE TABLE Characters(
     characterID int NOT NULL AUTO_INCREMENT,
     characterName varchar(128) NOT NULL,
-    userID int,
     PRIMARY KEY (characterID),
-    FOREIGN KEY (userID) REFERENCES Users(userID) ON DELETE CASCADE
 );
 
 -- Erstellen der Categories-Tabelle
