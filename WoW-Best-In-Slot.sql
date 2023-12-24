@@ -80,8 +80,6 @@ CREATE TABLE EquipmentSlot(
     FOREIGN KEY (characterID) REFERENCES Characters(characterID) ON DELETE CASCADE
 );
 
-INSERT INTO Users (userName,userEmail,userPassword,userRole) VALUES ('cayik', 'admin@admin.com', 'admin', 'ADMIN');
-
 -- Einfügen von Daten in die Characters-Tabelle
 INSERT INTO Characters (characterName) VALUES ('Cayan');
 INSERT INTO Characters (characterName) VALUES ('Chris');
