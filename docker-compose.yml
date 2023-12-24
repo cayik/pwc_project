@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  webapp:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+
+  db:
+    image: "mysql:latest"
+    environment:
+      MYSQL_ROOT_PASSWORD: "H3ck-This:88"
+      MYSQL_DATABASE: "WoW_BIS"
+    ports:
+      - "33006:3306"
+    volumes:
+      - my-db:/var/lib/mysql
+      - ./WoW-Best-In-Slot.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  my-db:
