@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using pwc_project.Models;
 using pwc_project.Models.database;
@@ -71,7 +72,7 @@ namespace pwc_project.Controllers
             }
         }
 
-        [HttpGet("{equipmentID}")]
+        [HttpGet("{equipmentID}"),Authorize]
         public IActionResult GetEquipment(int equipmentID)
         {
             EquipmentResponse? equipment = new EquipmentResponse();

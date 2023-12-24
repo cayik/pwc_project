@@ -15,8 +15,8 @@ DROP TABLE IF EXISTS Users;
 -- Erstellen der Characters-Tabelle
 CREATE TABLE Users(
     userID int NOT NULL AUTO_INCREMENT,
-    userName varchar(128) NOT NULL,
-    userEmail varchar(128) NOT NULL,
+    userName varchar(128) NOT NULL UNIQUE,
+    userEmail varchar(128) NOT NULL UNIQUE,
     userPassword varchar(256) NOT NULL,
     userRole varchar(64) DEFAULT 'USER',
     PRIMARY KEY (userID)
@@ -26,7 +26,7 @@ CREATE TABLE Users(
 CREATE TABLE Characters(
     characterID int NOT NULL AUTO_INCREMENT,
     characterName varchar(128) NOT NULL,
-    PRIMARY KEY (characterID),
+    PRIMARY KEY (characterID)
 );
 
 -- Erstellen der Categories-Tabelle

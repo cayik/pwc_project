@@ -13,6 +13,6 @@ namespace pwc_project.Models.database
 
         public string userPassword { get; set; }
 
-        public string userRole { get; set; }
+        public string userRole { get; set; } = "USER";
     }
 }
