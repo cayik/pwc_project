@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using pwc_project.Models;
@@ -10,6 +11,7 @@ namespace pwc_project.Controllers
 {
 
     [ApiController]
+    [Authorize]
     [Route("[controller]")]
 
     public class CharacterController : Controller

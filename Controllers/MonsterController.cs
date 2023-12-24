@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using pwc_project.Models;
 using pwc_project.Models.database;
 using pwc_project.Models.responses;
@@ -7,6 +8,7 @@ namespace pwc_project.Controllers
 {
 
     [ApiController]
+    [Authorize]
     [Route("[controller]")]
 
     public class MonstersController : Controller

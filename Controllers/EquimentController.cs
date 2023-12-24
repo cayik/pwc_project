@@ -9,6 +9,7 @@ namespace pwc_project.Controllers
 {
 
     [ApiController]
+    [Authorize]
     [Route("[controller]")]
 
     public class EquipmentController : Controller

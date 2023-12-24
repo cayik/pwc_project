@@ -8,8 +8,8 @@
 
 
 
-- [ ] User authentification
-- [ ] Login
-- [ ] Register
-- [ ] JWT / Hashing
+- [X] User authentification
+- [X] Login
+- [X] Register
+- [X] JWT / Hashing
 - [ ] Dokumentieren
